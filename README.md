@@ -5,6 +5,7 @@ ShopEase is a fully functional e-commerce product store built with vanilla HTML,
 ## Live Demo
 
 
+
 ## Features
 
 - Fetches 20 real products from `https://fakestoreapi.com/products` using `fetch()` + async/await
@@ -75,5 +76,6 @@ this project.
 _Add at least 3 screenshots: desktop product grid, mobile view, and the cart drawer open._
 
 ## Video Walkthrough
+
 
 
