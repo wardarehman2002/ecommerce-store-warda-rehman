@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShopEase — Product Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/skeleton.css" />
+<link rel="stylesheet" href="css/dark-mode.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="logo">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>ShopEase</span>
+    </div>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#" class="nav-link active" data-view="store">Store</a>
+      <a href="#" class="nav-link" data-view="wishlist">Wishlist <span id="wishlistNavCount" class="mini-badge hidden">0</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="darkModeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+      <button class="icon-btn wishlist-btn" id="wishlistBtn" aria-label="Wishlist">
+        <i class="fa-solid fa-heart"></i>
+        <span class="badge hidden" id="wishlistBadge">0</span>
+      </button>
+
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="Open cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="badge hidden" id="cartBadge">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="main-container">
+
+  <section class="store-view" id="storeView">
+
+    <!-- Controls -->
+    <div class="controls-bar">
+      <div class="search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search products..." />
+      </div>
+
+      <select id="sortSelect" class="sort-select">
+        <option value="default">Sort by</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating-desc">Rating: Best First</option>
+        <option value="name-asc">Name: A to Z</option>
+      </select>
+
+      <button id="clearFiltersBtn" class="clear-btn">
+        <i class="fa-solid fa-rotate-left"></i> Clear All Filters
+      </button>
+    </div>
+
+    <div class="category-bar" id="categoryBar">
+      <!-- category buttons injected dynamically -->
+    </div>
+
+    <p class="product-count" id="productCount">Showing 0 products</p>
+
+    <!-- Skeleton loaders -->
+    <div class="product-grid" id="skeletonGrid"></div>
+
+    <!-- Error state -->
+    <div class="error-state hidden" id="errorState">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <h3>Something went wrong</h3>
+      <p>We couldn't load the products. Please check your connection and try again.</p>
+      <button id="retryBtn" class="primary-btn">Try Again</button>
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty-state hidden" id="emptyState">
+      <i class="fa-solid fa-box-open"></i>
+      <h3>No products found</h3>
+      <p>Try adjusting your search or filters to find what you're looking for.</p>
+    </div>
+
+    <!-- Product grid -->
+    <div class="product-grid hidden" id="productGrid"></div>
+
+  </section>
+
+  <!-- Wishlist view -->
+  <section class="wishlist-view hidden" id="wishlistView">
+    <h2 class="section-title">My Wishlist</h2>
+    <div class="empty-state hidden" id="wishlistEmptyState">
+      <i class="fa-solid fa-heart-crack"></i>
+      <h3>Your wishlist is empty</h3>
+      <p>Save products you love by clicking the heart icon on any product.</p>
+    </div>
+    <div class="product-grid" id="wishlistGrid"></div>
+  </section>
+
+</main>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-overlay hidden" id="productModalOverlay">
+  <div class="modal product-modal" id="productModal">
+    <button class="modal-close" id="closeProductModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-body" id="productModalBody">
+      <!-- injected -->
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT CONFIRMATION MODAL -->
+<div class="modal-overlay hidden" id="checkoutModalOverlay">
+  <div class="modal checkout-modal" id="checkoutModal">
+    <button class="modal-close" id="closeCheckoutModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-body" id="checkoutModalBody">
+      <!-- injected -->
+    </div>
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="drawer-overlay hidden" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-header">
+    <h3><i class="fa-solid fa-cart-shopping"></i> Your Cart</h3>
+    <button class="modal-close" id="closeCartDrawer" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <div class="drawer-body" id="cartItemsContainer">
+    <!-- injected -->
+  </div>
+
+  <div class="drawer-footer" id="cartFooter">
+    <div class="subtotal-row">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">$0.00</span>
+    </div>
+    <button class="primary-btn checkout-btn" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<!-- Toast notification -->
+<div class="toast hidden" id="toast"></div>
+
+<script src="js/api.js"></script>
+<script src="js/products.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

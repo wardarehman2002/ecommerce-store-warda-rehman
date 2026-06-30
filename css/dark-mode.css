@@ -1,0 +1,47 @@
+/* ===================== DARK MODE OVERRIDES ===================== */
+body.dark-mode {
+  --bg: #14141f;
+  --surface: #1f1f2e;
+  --text-primary: #f1f1f5;
+  --text-secondary: #a0a0b0;
+  --border: #34344a;
+  --shadow: 0 4px 14px rgba(0,0,0,0.4);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.55);
+}
+
+body.dark-mode .card-img-wrap,
+body.dark-mode .modal-img-wrap {
+  background: #2a2a3d;
+}
+
+body.dark-mode .wishlist-heart {
+  background: rgba(31,31,46,0.85);
+  color: #888;
+}
+
+body.dark-mode .skeleton-img,
+body.dark-mode .skeleton-line,
+body.dark-mode .skeleton-btn {
+  background: linear-gradient(90deg, #2a2a3d 25%, #34344a 37%, #2a2a3d 63%);
+  background-size: 400% 100%;
+}
+
+body.dark-mode .cart-item img {
+  background: #2a2a3d;
+}
+
+body.dark-mode .qty-btn,
+body.dark-mode .cart-qty-btn {
+  background: #2a2a3d;
+}
+body.dark-mode .qty-btn:hover,
+body.dark-mode .cart-qty-btn:hover {
+  background: #34344a;
+}
+
+body.dark-mode .modal-close {
+  background: #2a2a3d;
+}
+body.dark-mode .modal-close:hover {
+  background: #34344a;
+}
