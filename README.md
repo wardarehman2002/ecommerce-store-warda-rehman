@@ -4,7 +4,7 @@ ShopEase is a fully functional e-commerce product store built with vanilla HTML,
 
 ## Live Demo
 
-
+ https://wardarehman2002.github.io/ecommerce-store-warda-rehman/ 
 
 ## Features
 
