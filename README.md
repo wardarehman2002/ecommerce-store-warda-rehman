@@ -73,6 +73,8 @@ this project.
 
 ## Screenshots
 
+_Add at least 3 screenshots: desktop product grid, mobile view, and the cart drawer open._
+
 Desktop View
 
 <img width="796" height="4360" alt="desktop" src="https://github.com/user-attachments/assets/e00633da-1bb5-46fd-b3bb-e8a9135c7f57" />
@@ -86,18 +88,6 @@ Cart Drawer View
 <img width="1339" height="638" alt="cart " src="https://github.com/user-attachments/assets/c3dbc621-6cfc-4986-a926-51c92d873786" />
 
 <img width="1349" height="644" alt="cart subtotal" src="https://github.com/user-attachments/assets/463d463d-20c9-4953-9703-96cfe5f891e0" />
-
-
-
-
-
-
-
-
-
-
-
-_Add at least 3 screenshots: desktop product grid, mobile view, and the cart drawer open._
 
 ## Video Walkthrough
 
