@@ -91,6 +91,6 @@ Cart Drawer View
 
 ## Video Walkthrough
 
-https://www.loom.com/share/a4a961ebf16542668e77b22a83207ddb
+<https://loom.com/share/a4a961ebf16542668e77b22a83207ddb> 
 
 
