@@ -77,7 +77,7 @@ _Add at least 3 screenshots: desktop product grid, mobile view, and the cart dra
 
 Desktop View
 
-<img width="796" height="4360" alt="desktop" src="https://github.com/user-attachments/assets/e00633da-1bb5-46fd-b3bb-e8a9135c7f57" />
+<img width="796" height="4360" alt="wardarehman2002 github io_ecommerce-store-warda-rehman_" src="https://github.com/user-attachments/assets/d6c1d72a-44e8-4940-b180-380514226614" />
 
 Mobile View
 
